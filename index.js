@@ -35,3 +35,23 @@ function heavyDuty2() {
     return bigArray[index]
   }
 }
+
+// 2. Encapsulation
+const makeNuclearButton = () => {
+  let timeWithoutDestruction = 0
+  const passtime = () => timeWithoutDestruction++;
+  const totalPeaceTime = () => tiemeWithoutDestruction;
+  const launch = () => {
+    timeWithoutDestruction -= 1;
+    return '💥';
+  }
+  setInterval(passTime, 1000)
+  return {
+    totalPeaceTime: totalPeaceTime
+  }
+}
+
+const ohno = makeNuclearButton();
+ohno.passTime() //
+ohno.timeWithoutDestruction // undefined
+// We can't get access to timeWithoutDestruction outside, but we are still accessible to it inside of makeNuclearButton(), because of closure. So closure makes encapsulation for us to save, keep, protect our data.
